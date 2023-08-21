@@ -17,6 +17,16 @@ builder.Services.AddDbContext<CourseCreatorContext>(options =>
 });
 builder.Services.AddControllersWithViews();
 var app = builder.Build();
+//app.UseEndpoints(endpoints =>
+//{
+//    endpoints.MapControllerRoute(
+//        name: "admin",
+//        pattern: "admin/{controller=Admin}/{action=Index}/{id?}");
+
+//    endpoints.MapControllerRoute(
+//        name: "default",
+//        pattern: "{controller=Home}/{action=Index}/{id?}");
+//});
 app.MapDefaultControllerRoute();
 app.UseStaticFiles();
 //app.MapGet("/", () => "Hello World!");
