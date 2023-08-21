@@ -1,0 +1,14 @@
+D:\CourseCreator\CourseCreator\CourseCreator.DataLayer\bin\Debug\net6.0\CourseCreator.DataLayer.deps.json
+D:\CourseCreator\CourseCreator\CourseCreator.DataLayer\bin\Debug\net6.0\CourseCreator.DataLayer.runtimeconfig.json
+D:\CourseCreator\CourseCreator\CourseCreator.DataLayer\bin\Debug\net6.0\CourseCreator.DataLayer.dll
+D:\CourseCreator\CourseCreator\CourseCreator.DataLayer\bin\Debug\net6.0\CourseCreator.DataLayer.pdb
+D:\CourseCreator\CourseCreator\CourseCreator.DataLayer\obj\Debug\net6.0\CourseCreator.DataLayer.csproj.AssemblyReference.cache
+D:\CourseCreator\CourseCreator\CourseCreator.DataLayer\obj\Debug\net6.0\CourseCreator.DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\CourseCreator\CourseCreator\CourseCreator.DataLayer\obj\Debug\net6.0\CourseCreator.DataLayer.AssemblyInfoInputs.cache
+D:\CourseCreator\CourseCreator\CourseCreator.DataLayer\obj\Debug\net6.0\CourseCreator.DataLayer.AssemblyInfo.cs
+D:\CourseCreator\CourseCreator\CourseCreator.DataLayer\obj\Debug\net6.0\CourseCreator.DataLayer.csproj.CoreCompileInputs.cache
+D:\CourseCreator\CourseCreator\CourseCreator.DataLayer\obj\Debug\net6.0\CourseCreator.DataLayer.dll
+D:\CourseCreator\CourseCreator\CourseCreator.DataLayer\obj\Debug\net6.0\refint\CourseCreator.DataLayer.dll
+D:\CourseCreator\CourseCreator\CourseCreator.DataLayer\obj\Debug\net6.0\CourseCreator.DataLayer.pdb
+D:\CourseCreator\CourseCreator\CourseCreator.DataLayer\obj\Debug\net6.0\CourseCreator.DataLayer.genruntimeconfig.cache
+D:\CourseCreator\CourseCreator\CourseCreator.DataLayer\obj\Debug\net6.0\ref\CourseCreator.DataLayer.dll

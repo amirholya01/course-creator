@@ -1,0 +1,18 @@
+﻿
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 20%; /* Adjust this value to vertically center the text */
+    left: 40%; /* Adjust this value to horizontally center the text */
+    transform: translate(-50%, -50%);
+    /*background-color: rgba(0, 0, 0, 0.5);*/ /* Background color for text container */
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+

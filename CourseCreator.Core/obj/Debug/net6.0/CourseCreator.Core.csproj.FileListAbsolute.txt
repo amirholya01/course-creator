@@ -1,0 +1,17 @@
+D:\CourseCreator\CourseCreator\CourseCreator.Core\bin\Debug\net6.0\CourseCreator.Core.deps.json
+D:\CourseCreator\CourseCreator\CourseCreator.Core\bin\Debug\net6.0\CourseCreator.Core.dll
+D:\CourseCreator\CourseCreator\CourseCreator.Core\bin\Debug\net6.0\CourseCreator.Core.pdb
+D:\CourseCreator\CourseCreator\CourseCreator.Core\obj\Debug\net6.0\CourseCreator.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\CourseCreator\CourseCreator\CourseCreator.Core\obj\Debug\net6.0\CourseCreator.Core.AssemblyInfoInputs.cache
+D:\CourseCreator\CourseCreator\CourseCreator.Core\obj\Debug\net6.0\CourseCreator.Core.AssemblyInfo.cs
+D:\CourseCreator\CourseCreator\CourseCreator.Core\obj\Debug\net6.0\CourseCreator.Core.csproj.CoreCompileInputs.cache
+D:\CourseCreator\CourseCreator\CourseCreator.Core\obj\Debug\net6.0\CourseCreator.Core.dll
+D:\CourseCreator\CourseCreator\CourseCreator.Core\obj\Debug\net6.0\refint\CourseCreator.Core.dll
+D:\CourseCreator\CourseCreator\CourseCreator.Core\obj\Debug\net6.0\CourseCreator.Core.pdb
+D:\CourseCreator\CourseCreator\CourseCreator.Core\obj\Debug\net6.0\ref\CourseCreator.Core.dll
+D:\CourseCreator\CourseCreator\CourseCreator.Core\bin\Debug\net6.0\CourseCreator.Core.runtimeconfig.json
+D:\CourseCreator\CourseCreator\CourseCreator.Core\bin\Debug\net6.0\CourseCreator.DataLayer.dll
+D:\CourseCreator\CourseCreator\CourseCreator.Core\bin\Debug\net6.0\CourseCreator.DataLayer.pdb
+D:\CourseCreator\CourseCreator\CourseCreator.Core\obj\Debug\net6.0\CourseCreator.Core.csproj.AssemblyReference.cache
+D:\CourseCreator\CourseCreator\CourseCreator.Core\obj\Debug\net6.0\CourseCreator.Core.csproj.CopyComplete
+D:\CourseCreator\CourseCreator\CourseCreator.Core\obj\Debug\net6.0\CourseCreator.Core.genruntimeconfig.cache
