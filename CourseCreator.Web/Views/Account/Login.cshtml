@@ -1,0 +1,32 @@
+﻿@model CourseCreator.Core.DTOs.LoginViewModel;
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="container">
+    <div class="row">
+         <h4>Login</h4>
+        <hr/>
+        <br />
+        <form class="mt-10" asp-action="Login" method="post">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input asp-for="Email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>               
+            </div>
+            <span asp-validation-for="Email" class="text-danger"></span>
+            <br/>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input asp-for="Password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+            </div>
+            <span asp-validation-for="Password" class="text-danger"></span>
+            <br />
+            <br/>
+            <button type="submit" class="btn btn-success">Login</button>
+            
+            <a href="/ForgotPassword" class="btn btn-primary">Forgot Password</a>
+           
+        </form>
+    </div>
+</div>

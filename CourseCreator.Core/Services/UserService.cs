@@ -1,4 +1,7 @@
-﻿using CourseCreator.Core.Services.Interfaces;
+﻿using CourseCreator.Core.Convertors;
+using CourseCreator.Core.DTOs;
+using CourseCreator.Core.Security;
+using CourseCreator.Core.Services.Interfaces;
 using CourseCreator.DataLayer.Context;
 using CourseCreator.DataLayer.Entities.User;
 using System;
@@ -33,6 +36,14 @@ namespace CourseCreator.Core.Services
         public bool IsUsernameExist(string username)
         {
             return _contex.Users.Any(u => u.Username == username);
+        }
+
+        public User LoginUser(LoginViewModel login)
+        {
+            string hashPassword = HashString.EncodeString(login.Password);
+            string email = FixedValidFields.ValidEmail(login.Email);
+
+            return _contex.Users.SingleOrDefault(u => u.Email == email && u.Password == hashPassword);
         }
     }
 }

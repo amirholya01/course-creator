@@ -17,6 +17,7 @@ namespace CourseCreator.Web.Controllers
             _userService = userService;
         }
 
+        #region Register
         [Route("Register")]
         public async Task<IActionResult> Register()
         {
@@ -34,14 +35,14 @@ namespace CourseCreator.Web.Controllers
             }
 
 
-            if(_userService.IsEmailExist(FixedValidFields.ValidEmail(register.Email)))
+            if (_userService.IsEmailExist(FixedValidFields.ValidEmail(register.Email)))
             {
                 ModelState.AddModelError("Email", "The emial is not valid.");
                 return View(register);
             }
 
 
-            if(_userService.IsUsernameExist(register.Username))
+            if (_userService.IsUsernameExist(register.Username))
             {
                 ModelState.AddModelError("Username", "The username is not valid.");
                 return View(register);
@@ -57,10 +58,20 @@ namespace CourseCreator.Web.Controllers
                 UserAvator = "default.png",
                 Username = register.Username,
             };
-            
-            _userService.AddUser(user);    
 
+            _userService.AddUser(user);
+
+            //TODO: Activating link - must send an email
             return View("successRegister", user);
         }
+        #endregion
+
+        #region Login
+        [Route("Login")]
+        public IActionResult Login()
+        {
+            return View();
+        }
+        #endregion
     }
 }

@@ -33,4 +33,18 @@ namespace CourseCreator.Core.DTOs
         [Compare("Password", ErrorMessage = "The password entered is not correct.")]
         public string ConfirmPassword { get; set; }
     }
+
+    public class LoginViewModel
+    {
+        [Display(Name = "Email")]
+        [Required(ErrorMessage = "The {0} must not be empty.")]
+        [StringLength(30, ErrorMessage = "The {0} can not be more than {1} characters.")]
+        [EmailAddress(ErrorMessage = "The {0} is not valid.")]
+        public string Email { get; set; }
+
+        [Display(Name = "Password")]
+        [Required(ErrorMessage = "The {0} must not be empty.")]
+        [StringLength(20, ErrorMessage = "The {0} can not be more than {1} characters.")]
+        public string Password { get; set; }
+    }
 }
