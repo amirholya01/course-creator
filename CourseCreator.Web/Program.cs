@@ -1,3 +1,5 @@
+using CourseCreator.Core.Services;
+using CourseCreator.Core.Services.Interfaces;
 using CourseCreator.DataLayer.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -15,6 +17,7 @@ builder.Services.AddDbContext<CourseCreatorContext>(options =>
 {
     options.UseSqlServer(connectionString);
 });
+builder.Services.AddTransient<IUserService, UserService>(); //Ioc
 builder.Services.AddControllersWithViews();
 var app = builder.Build();
 //app.UseEndpoints(endpoints =>

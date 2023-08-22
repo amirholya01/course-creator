@@ -243,6 +243,21 @@
           }
         }
       },
+      "jQuery/1.8.0": {
+        "type": "package"
+      },
+      "jQuery.Validation/1.19.5": {
+        "type": "package",
+        "dependencies": {
+          "jQuery": "1.4.4"
+        }
+      },
+      "jQuery.Validation.Unobtrusive/2.0.20710": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.jQuery.Unobtrusive.Validation": "2.0.20613"
+        }
+      },
       "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
@@ -673,6 +688,13 @@
           "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Microsoft.jQuery.Unobtrusive.Validation/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "jQuery": "1.8.0",
+          "jQuery.Validation": "1.8.0.1"
         }
       },
       "Microsoft.NETCore.Platforms/3.1.0": {
@@ -1211,6 +1233,50 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "jQuery/1.8.0": {
+      "sha512": "laDFQRJrIRHT0Z0GVYklMt3bE0iu0MZFJwHwg21kt3SHb7Bj8TdNiM3K+ZdK1DzB8ZxKy8z7NkJvwMas+dmHBw==",
+      "type": "package",
+      "path": "jquery/1.8.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Scripts/jquery-1.8.0-vsdoc.js",
+        "Content/Scripts/jquery-1.8.0.js",
+        "Content/Scripts/jquery-1.8.0.min.js",
+        "Tools/common.ps1",
+        "Tools/install.ps1",
+        "Tools/jquery-1.8.0.intellisense.js",
+        "Tools/uninstall.ps1",
+        "jquery.1.8.0.nupkg.sha512",
+        "jquery.nuspec"
+      ]
+    },
+    "jQuery.Validation/1.19.5": {
+      "sha512": "lBHoaszLpKYxiVCWwIoxdqSCrlqnW9jeVMinMQ0uNMFcl3rmY8XyeaerfGLRbkVRUzh/fM3APaKepEezrR5AcA==",
+      "type": "package",
+      "path": "jquery.validation/1.19.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Scripts/jquery.validate-vsdoc.js",
+        "Content/Scripts/jquery.validate.js",
+        "Content/Scripts/jquery.validate.min.js",
+        "jquery.validation.1.19.5.nupkg.sha512",
+        "jquery.validation.nuspec"
+      ]
+    },
+    "jQuery.Validation.Unobtrusive/2.0.20710": {
+      "sha512": "b+1siHUyEjSM3fnPKFO4f19+frMy9JCw2vcOo2LFXfhkw/KTO9qOroDNmpi6TJUYUGIkffgPkNB8IGtph1DTQg==",
+      "type": "package",
+      "path": "jquery.validation.unobtrusive/2.0.20710",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jquery.validation.unobtrusive.2.0.20710.nupkg.sha512",
+        "jquery.validation.unobtrusive.nuspec"
       ]
     },
     "Microsoft.CSharp/4.5.0": {
@@ -1838,6 +1904,19 @@
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
+    "Microsoft.jQuery.Unobtrusive.Validation/4.0.0": {
+      "sha512": "RJ1eBcFIwHINVocYtOlmBQd21jGgHOHGe7TLzmQ9VMRMUqAlJoxyCw1AayBkdExqrEZt0Wz9uaZiDX75NHQmSw==",
+      "type": "package",
+      "path": "microsoft.jquery.unobtrusive.validation/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Scripts/jquery.validate.unobtrusive.js",
+        "Content/Scripts/jquery.validate.unobtrusive.min.js",
+        "microsoft.jquery.unobtrusive.validation.4.0.0.nupkg.sha512",
+        "microsoft.jquery.unobtrusive.validation.nuspec"
+      ]
+    },
     "Microsoft.NETCore.Platforms/3.1.0": {
       "sha512": "z7aeg8oHln2CuNulfhiLYxCVMPEwBl3rzicjvIX+4sUuCwvXw5oXQEtbiU2c0z4qYL5L3Kmx0mMA/+t/SbY67w==",
       "type": "package",
@@ -2434,7 +2513,10 @@
       "Microsoft.EntityFrameworkCore >= 6.0.21",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.21",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.21",
-      "bootstrap >= 5.3.1"
+      "Microsoft.jQuery.Unobtrusive.Validation >= 4.0.0",
+      "bootstrap >= 5.3.1",
+      "jQuery.Validation >= 1.19.5",
+      "jQuery.Validation.Unobtrusive >= 2.0.20710"
     ]
   },
   "packageFolders": {
@@ -2501,9 +2583,21 @@
             "target": "Package",
             "version": "[6.0.21, )"
           },
+          "Microsoft.jQuery.Unobtrusive.Validation": {
+            "target": "Package",
+            "version": "[4.0.0, )"
+          },
           "bootstrap": {
             "target": "Package",
             "version": "[5.3.1, )"
+          },
+          "jQuery.Validation": {
+            "target": "Package",
+            "version": "[1.19.5, )"
+          },
+          "jQuery.Validation.Unobtrusive": {
+            "target": "Package",
+            "version": "[2.0.20710, )"
           }
         },
         "imports": [

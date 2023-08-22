@@ -7,10 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\" />
-    <Folder Include="Convertors\" />
     <Folder Include="Security\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>

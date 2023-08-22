@@ -1,21 +1,40 @@
-﻿@{
+﻿@model CourseCreator.Core.DTOs.RegisterViewModel;
+@{
     ViewData["Title"] = "Register";
 }
 
+
 <div class="container">
     <div class="row">
-        <form class="mt-10">
+        <h4 class="text.color.dark">Register</h4>
+        <hr/>
+        <br />
+        <form class="mt-10" asp-action="Register" method="post">
+            <div class="form-group">
+                <label for="exampleInputUsername1">Username</label>
+                <input asp-for="Username" type="text" class="form-control" id="exampleInputUsername1" placeholder="Username" />
+            </div>
+            <br />
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <input asp-for="Email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <br/>
             <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                <input asp-for="Password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
             <br/>
+            <div class="form-group">
+                <label for="exampleInputConfirmPassword1">Confirm Password</label>
+                <input asp-for="ConfirmPassword" type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Confirm Password">
+            </div>
+            <br/>
+            <div asp-validation-summary="All" class="text-danger">
+
+            </div>
+            <br />
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
