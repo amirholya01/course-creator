@@ -177,6 +177,10 @@
       "PackagePath": "staticwebassets\\js\\bootstrap.min.js.map"
     },
     {
+      "Id": "D:\\CourseCreator\\CourseCreator\\CourseCreator.Web\\wwwroot\\UserAvatar\\default.png",
+      "PackagePath": "staticwebassets\\UserAvatar\\default.png"
+    },
+    {
       "Id": "D:\\CourseCreator\\CourseCreator\\CourseCreator.Web\\wwwroot\\assets\\css\\Default_Style.css",
       "PackagePath": "staticwebassets\\assets\\css\\Default_Style.css"
     },

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CourseCreator.DataLayer.Entities.User;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +11,6 @@ namespace CourseCreator.Core.Services.Interfaces
     {
         bool IsUsernameExist(string username);
         bool IsEmailExist(string email);
+        long AddUser(User user);
     }
 }

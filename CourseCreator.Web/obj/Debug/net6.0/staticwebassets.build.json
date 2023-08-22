@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xgJM/CQoS9Me0Aos+QsoNeK8APRRCI2SCn+7PYUvh88=",
+  "Hash": "AWmcuqw86enHpo1GfkkNlJhclc+G4OFlGwrou3cJeQg=",
   "Source": "CourseCreator.Web",
   "BasePath": "_content/CourseCreator.Web",
   "Mode": "Default",
@@ -1222,6 +1222,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\user-regular.svg"
+    },
+    {
+      "Identity": "D:\\CourseCreator\\CourseCreator\\CourseCreator.Web\\wwwroot\\UserAvatar\\default.png",
+      "SourceId": "CourseCreator.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CourseCreator\\CourseCreator\\CourseCreator.Web\\wwwroot\\",
+      "BasePath": "_content/CourseCreator.Web",
+      "RelativePath": "UserAvatar/default.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UserAvatar\\default.png"
     }
   ]
 }

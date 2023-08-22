@@ -32,13 +32,13 @@ namespace CourseCreator.DataLayer.Entities.User
 
         [Display(Name = "password")]
         [Required(ErrorMessage = "The {0} must not be empty.")]
-        [StringLength(20, ErrorMessage = "The {0} can not be more than {1} characters.")]
+        [StringLength(100, ErrorMessage = "The {0} can not be more than {1} characters.")]
         public string Password { get; set; }
 
 
 
         [Display(Name = "Active Code")]
-        [StringLength(20, ErrorMessage = "The {0} can not be more than {1} characters.")]
+        [StringLength(100, ErrorMessage = "The {0} can not be more than {1} characters.")]
         public string ActiveCode { get; set; }
 
 

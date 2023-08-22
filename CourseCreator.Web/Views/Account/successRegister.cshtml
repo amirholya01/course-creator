@@ -1,0 +1,14 @@
+﻿@model CourseCreator.DataLayer.Entities.User.User;
+@{
+    ViewData["Title"] = "Success-Register";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="alert alert-success">
+            <h2>Dear "@Model.Username"</h2>
+            <p>You'r registration has been done, sending an Email to "@Model.Email" for activating.</p>
+            <p>Please login into your email account and click on active link.</p>
+        </div>
+    </div>
+</div>

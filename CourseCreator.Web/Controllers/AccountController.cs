@@ -1,6 +1,9 @@
 ﻿using CourseCreator.Core.Convertors;
 using CourseCreator.Core.DTOs;
+using CourseCreator.Core.Security;
 using CourseCreator.Core.Services.Interfaces;
+using CourseCreator.Core.Utils;
+using CourseCreator.DataLayer.Entities.User;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CourseCreator.Web.Controllers
@@ -22,6 +25,7 @@ namespace CourseCreator.Web.Controllers
         }
 
         [HttpPost]
+        [Route("Register")]
         public async Task<IActionResult> Register(RegisterViewModel register)
         {
             if (!ModelState.IsValid)
@@ -43,11 +47,20 @@ namespace CourseCreator.Web.Controllers
                 return View(register);
             }
 
-            //TODO: Register User
+            User user = new User()
+            {
+                ActiveCode = Util.GenerateUniqueCode(),
+                Email = FixedValidFields.ValidEmail(register.Email),
+                IsAvtive = false,
+                Password = HashString.EncodeString(register.Password),
+                RegisterDate = DateTime.Now,
+                UserAvator = "default.png",
+                Username = register.Username,
+            };
             
+            _userService.AddUser(user);    
 
-
-            return View(register);
+            return View("successRegister", user);
         }
     }
 }

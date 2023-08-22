@@ -16,6 +16,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "6.0.21",
           "Microsoft.jQuery.Unobtrusive.Validation": "4.0.0",
           "bootstrap": "5.3.1",
+          "glyphicon": "1.0.1",
           "jQuery.Validation": "1.19.5",
           "jQuery.Validation.Unobtrusive": "2.0.20710"
         },
@@ -25,6 +26,7 @@
       },
       "bootstrap/5.3.1": {},
       "Font.Awesome/5.15.4": {},
+      "glyphicon/1.0.1": {},
       "Humanizer.Core/2.8.26": {
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {
@@ -511,6 +513,13 @@
       "sha512": "sha512-Okg91rA7RWbd+eKyBNNnvlvzFee7A4yIi0WdTrJMVPos1ntONAVn/m96Ex9qvVXKKiroBZ1vtCXtpFMnHNof1g==",
       "path": "font.awesome/5.15.4",
       "hashPath": "font.awesome.5.15.4.nupkg.sha512"
+    },
+    "glyphicon/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eysBKGjcKFb4mdk04ZlStZUuDjaaql2/XuCNhCJtQZaCmsV3+iT5ogACJUEOXrb7/hlirlcTwDpoJB8raWPaYw==",
+      "path": "glyphicon/1.0.1",
+      "hashPath": "glyphicon.1.0.1.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",

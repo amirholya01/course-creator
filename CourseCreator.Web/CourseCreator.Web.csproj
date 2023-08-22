@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="bootstrap" Version="5.3.1" />
     <PackageReference Include="Font.Awesome" Version="5.15.4" />
+    <PackageReference Include="glyphicon" Version="1.0.1" />
     <PackageReference Include="jQuery.Validation" Version="1.19.5" />
     <PackageReference Include="jQuery.Validation.Unobtrusive" Version="2.0.20710" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.21" />

@@ -230,6 +230,9 @@
       "Font.Awesome/5.15.4": {
         "type": "package"
       },
+      "glyphicon/1.0.1": {
+        "type": "package"
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -1217,6 +1220,18 @@
         "Content/webfonts/fa-solid-900.woff2",
         "font.awesome.5.15.4.nupkg.sha512",
         "font.awesome.nuspec"
+      ]
+    },
+    "glyphicon/1.0.1": {
+      "sha512": "eysBKGjcKFb4mdk04ZlStZUuDjaaql2/XuCNhCJtQZaCmsV3+iT5ogACJUEOXrb7/hlirlcTwDpoJB8raWPaYw==",
+      "type": "package",
+      "path": "glyphicon/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/App_Code/GlyphIcon.cshtml",
+        "glyphicon.1.0.1.nupkg.sha512",
+        "glyphicon.nuspec"
       ]
     },
     "Humanizer.Core/2.8.26": {
@@ -2515,6 +2530,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.21",
       "Microsoft.jQuery.Unobtrusive.Validation >= 4.0.0",
       "bootstrap >= 5.3.1",
+      "glyphicon >= 1.0.1",
       "jQuery.Validation >= 1.19.5",
       "jQuery.Validation.Unobtrusive >= 2.0.20710"
     ]
@@ -2590,6 +2606,10 @@
           "bootstrap": {
             "target": "Package",
             "version": "[5.3.1, )"
+          },
+          "glyphicon": {
+            "target": "Package",
+            "version": "[1.0.1, )"
           },
           "jQuery.Validation": {
             "target": "Package",

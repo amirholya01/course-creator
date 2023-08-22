@@ -1,5 +1,6 @@
 ﻿using CourseCreator.Core.Services.Interfaces;
 using CourseCreator.DataLayer.Context;
+using CourseCreator.DataLayer.Entities.User;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,13 @@ namespace CourseCreator.Core.Services
         public UserService(CourseCreatorContext context)
         {
             _contex = context;
+        }
+
+        public long AddUser(User user)
+        {
+            _contex.Users.Add(user);
+            _contex.SaveChanges();
+            return user.UserId;
         }
 
         public bool IsEmailExist(string email)
