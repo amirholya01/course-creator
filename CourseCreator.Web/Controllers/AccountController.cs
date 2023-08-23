@@ -72,6 +72,34 @@ namespace CourseCreator.Web.Controllers
         {
             return View();
         }
+
+
+        [Route("Login")]
+        [HttpPost]
+        public IActionResult Login(LoginViewModel login)
+        {
+            if(!ModelState.IsValid)
+            {
+                return View(login);
+            }
+            var user = _userService.LoginUser(login);
+            if(user != null)
+            {
+                if (user.IsAvtive)
+                {
+                    //TODO: Login User
+                    //ViewBag.IsSuccess = true;
+                    return Redirect("/");
+                }
+                else
+                {
+                    ModelState.AddModelError("Email", "Your acount is not active.");
+
+                }
+                ModelState.AddModelError("Email", "A user with the entered profile was not found.");
+            }
+            return View(login);
+        }
         #endregion
     }
 }
