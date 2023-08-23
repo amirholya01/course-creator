@@ -33,8 +33,18 @@
                     </li>
                 </ul>
             </div>
-            <a href="/Register" class="btn btn-secondary btn-right"><span>register</span></a>
-            <a href="/Login" class="btn btn-secondary btn-right"><span>login</span></a>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <div>
+                    <p>Welcome, @User.Identity.Name</p> 
+                    <a href="/Logout" class="btn btn-secondary btn-right"><span>logout</span></a>
+                </div>
+            }
+            else
+            {
+                <a href="/Register" class="btn btn-secondary btn-right"><span>register</span></a>
+                <a href="/Login" class="btn btn-secondary btn-right"><span>login</span></a>
+            }
         </div>
         
     </nav>

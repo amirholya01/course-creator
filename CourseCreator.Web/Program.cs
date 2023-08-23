@@ -1,6 +1,7 @@
 using CourseCreator.Core.Services;
 using CourseCreator.Core.Services.Interfaces;
 using CourseCreator.DataLayer.Context;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -19,6 +20,18 @@ builder.Services.AddDbContext<CourseCreatorContext>(options =>
 });
 builder.Services.AddTransient<IUserService, UserService>(); //Ioc
 builder.Services.AddControllersWithViews();
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+}).AddCookie(options =>
+{
+    options.LoginPath = "/Login";
+    options.LogoutPath = "/Logout";
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(43200);
+});
+
 var app = builder.Build();
 //app.UseEndpoints(endpoints =>
 //{
@@ -30,8 +43,10 @@ var app = builder.Build();
 //        name: "default",
 //        pattern: "{controller=Home}/{action=Index}/{id?}");
 //});
-app.MapDefaultControllerRoute();
 app.UseStaticFiles();
+app.UseAuthentication();
+app.MapDefaultControllerRoute();
+
 //app.MapGet("/", () => "Hello World!");
 
 app.Run();

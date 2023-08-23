@@ -4,7 +4,10 @@ using CourseCreator.Core.Security;
 using CourseCreator.Core.Services.Interfaces;
 using CourseCreator.Core.Utils;
 using CourseCreator.DataLayer.Entities.User;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace CourseCreator.Web.Controllers
 {
@@ -87,7 +90,21 @@ namespace CourseCreator.Web.Controllers
             {
                 if (user.IsAvtive)
                 {
-                    //TODO: Login User
+                   var claims = new List<Claim>()
+                   {
+                       new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
+                       new Claim(ClaimTypes.Name, user.Username)
+                   };
+
+                    var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    var principal = new ClaimsPrincipal(identity);
+                    var properties = new AuthenticationProperties
+                    {
+                        IsPersistent = true,
+                        //IsPersistent = login.RememberMe
+                    };
+
+                    HttpContext.SignInAsync(principal, properties);
                     //ViewBag.IsSuccess = true;
                     return Redirect("/");
                 }
@@ -107,6 +124,15 @@ namespace CourseCreator.Web.Controllers
         {
             ViewBag.IsActive = _userService.ActiveAccount(id);
             return View();
+        }
+        #endregion
+
+        #region
+        [Route("Logout")]
+        public IActionResult Logout()
+        {
+            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return Redirect("/");
         }
         #endregion
     }
