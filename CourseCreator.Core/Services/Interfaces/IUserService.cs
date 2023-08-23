@@ -14,5 +14,6 @@ namespace CourseCreator.Core.Services.Interfaces
         bool IsEmailExist(string email);
         long AddUser(User user);
         User LoginUser(LoginViewModel login);
+        bool ActiveAccount(string activeCode);
     }
 }

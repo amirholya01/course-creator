@@ -2,6 +2,7 @@
 using CourseCreator.Core.DTOs;
 using CourseCreator.Core.Security;
 using CourseCreator.Core.Services.Interfaces;
+using CourseCreator.Core.Utils;
 using CourseCreator.DataLayer.Context;
 using CourseCreator.DataLayer.Entities.User;
 using System;
@@ -21,6 +22,16 @@ namespace CourseCreator.Core.Services
             _contex = context;
         }
 
+        public bool ActiveAccount(string activeCode)
+        {
+            var user = _contex.Users.SingleOrDefault(u => u.ActiveCode == activeCode);
+            if (user == null || user.IsAvtive)
+                return false;
+            user.IsAvtive = true;
+            user.ActiveCode = Util.GenerateUniqueCode();
+            _contex.SaveChanges();
+            return true;
+        }
         public long AddUser(User user)
         {
             _contex.Users.Add(user);

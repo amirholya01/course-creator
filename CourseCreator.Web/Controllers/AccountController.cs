@@ -101,5 +101,13 @@ namespace CourseCreator.Web.Controllers
             return View(login);
         }
         #endregion
+
+        #region Active Code
+        public IActionResult ActiveAccount(string id)
+        {
+            ViewBag.IsActive = _userService.ActiveAccount(id);
+            return View();
+        }
+        #endregion
     }
 }
