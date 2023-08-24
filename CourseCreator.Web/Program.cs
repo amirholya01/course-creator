@@ -20,6 +20,7 @@ builder.Services.AddDbContext<CourseCreatorContext>(options =>
 });
 builder.Services.AddTransient<IUserService, UserService>(); //Ioc
 builder.Services.AddControllersWithViews();
+//Authentication
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
@@ -29,9 +30,10 @@ builder.Services.AddAuthentication(options =>
 {
     options.LoginPath = "/Login";
     options.LogoutPath = "/Logout";
-    options.ExpireTimeSpan = TimeSpan.FromMinutes(43200);
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(2);
+   // options.ExpireTimeSpan = TimeSpan.FromMinutes(43200);
 });
-
+builder.Services.AddRazorPages();
 var app = builder.Build();
 //app.UseEndpoints(endpoints =>
 //{
@@ -46,7 +48,7 @@ var app = builder.Build();
 app.UseStaticFiles();
 app.UseAuthentication();
 app.MapDefaultControllerRoute();
-
+app.MapRazorPages();
 //app.MapGet("/", () => "Hello World!");
 
 app.Run();

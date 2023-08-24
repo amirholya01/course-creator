@@ -68,3 +68,8 @@ D:\CourseCreator\CourseCreator\CourseCreator.Web\obj\Debug\net6.0\CourseCreator.
 D:\CourseCreator\CourseCreator\CourseCreator.Web\obj\Debug\net6.0\CourseCreator.Web.csproj.CopyComplete
 D:\CourseCreator\CourseCreator\CourseCreator.Web\obj\Debug\net6.0\CourseCreator.Web.RazorAssemblyInfo.cache
 D:\CourseCreator\CourseCreator\CourseCreator.Web\obj\Debug\net6.0\CourseCreator.Web.RazorAssemblyInfo.cs
+D:\CourseCreator\CourseCreator\CourseCreator.Web\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\CourseCreator\CourseCreator\CourseCreator.Web\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\CourseCreator\CourseCreator\CourseCreator.Web\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\CourseCreator\CourseCreator\CourseCreator.Web\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\CourseCreator\CourseCreator\CourseCreator.Web\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
